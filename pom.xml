@@ -5,10 +5,9 @@
   <artifactId>formatlog</artifactId>
   <packaging>jar</packaging>
   <version>0.1.0</version>
-  <name>Yodo1.Log</name>
+  <name>Yodo1 Logger</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
@@ -21,10 +20,8 @@
       <version>2.4</version>
       <classifier>jdk15</classifier>
     </dependency>
-
   </dependencies>
-
   <build>
-    <finalName>Yodo1Logger</finalName>
+    <finalName>yodo1logger</finalName>
   </build>
 </project>
