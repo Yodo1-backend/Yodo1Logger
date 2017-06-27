@@ -1,4 +1,4 @@
-package FormatLog;
+package com.yodo1.formatlog;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
