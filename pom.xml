@@ -4,7 +4,7 @@
   <groupId>com.yodo1</groupId>
   <artifactId>formatlog</artifactId>
   <packaging>jar</packaging>
-  <version>0.1.0</version>
+  <version>0.1.2</version>
   <name>Yodo1 Logger</name>
   <description>Yodo1 logger for OPS</description>
 
@@ -48,8 +48,11 @@
       <classifier>jdk15</classifier>
     </dependency>
   </dependencies>
+
+
   <build>
     <finalName>yodo1logger</finalName>
+
 
     <plugins>
       <plugin>
@@ -80,8 +83,9 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <encoding>UTF-8</encoding>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
 
@@ -101,6 +105,34 @@
         </executions>
       </plugin>
 
+      <!-- Source -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.2.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- Javadoc -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.10.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
 
   </build>
@@ -115,6 +147,7 @@
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
+
 
 
 </project>
