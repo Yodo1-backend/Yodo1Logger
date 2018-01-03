@@ -30,6 +30,10 @@ public class Yodo1ServiceLogger {
         this.paramCollection.put(key,value);
     }
 
+    public void ClearParam()
+    {
+        this.paramCollection = new JSONObject();
+    }
     public void ServiceFunctionLog(ResultDefine functionResult,String customStr)
     {
         LOG(MakeLogStr(functionResult.GetResultStr(),customStr));
