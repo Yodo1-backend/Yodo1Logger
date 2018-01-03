@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 /**
  * Created by YanFeng on 2017/6/6.
  */
-public class Yodo1Logger {
+public class Yodo1RequestLogger {
 
     private enum FuncStage
     {
