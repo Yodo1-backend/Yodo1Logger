@@ -73,7 +73,7 @@ public class Yodo1Logger {
     }
     public void AddParam(String key,Object value)
     {
-        this.paramCollection.put(key,value);
+        this.paramCollection.put(key,value== null ? "null" : value);
     }
     public void ClearParam()
     {
