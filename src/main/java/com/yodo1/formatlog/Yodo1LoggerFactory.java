@@ -8,9 +8,16 @@ import org.slf4j.LoggerFactory;
  */
 public final class Yodo1LoggerFactory {
 
-    public static Yodo1Logger getLogger(Class clazz)
+    public static Yodo1RequestLogger getRequestLogger(Class clazz)
     {
-        Yodo1Logger result = new Yodo1Logger();
+        Yodo1RequestLogger result = new Yodo1RequestLogger();
+        Logger innerLogger = LoggerFactory.getLogger(clazz.getName());
+        result.SetLogger(innerLogger);
+        return result;
+    }
+    public static Yodo1ServiceLogger getServiceLogger(Class clazz)
+    {
+        Yodo1ServiceLogger result = new Yodo1ServiceLogger();
         Logger innerLogger = LoggerFactory.getLogger(clazz.getName());
         result.SetLogger(innerLogger);
         return result;
